@@ -1,0 +1,38 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "sequelize": "sequelize",
+    "jest": "jest",
+    "test": "jest --runInBand --coverage",
+    "lint": "eslint .",
+    "eslint": "eslint",
+    "db:migrate": "npm run sequelize db:migrate",
+    "heroku-postbuild": "npm run db:migrate -- --env=production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "firebase-admin": "^9.9.0",
+    "pg": "^8.6.0",
+    "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-plugin-jest": "^24.3.6",
+    "jest": "^27.0.3",
+    "jest-cli": "^27.0.3",
+    "nodemon": "^2.0.7",
+    "sequelize-cli": "^6.2.0",
+    "sqlite3": "^5.0.2",
+    "supertest": "^6.1.3"
+  }
+}
